@@ -1,18 +1,18 @@
 const expect = require('chai').expect;
 const {
-  grouped_anagrams,
-  top_k_frequent_elements,
-  valid_sudoku
+  groupedAnagrams,
+  topKFrequentElements,
+  validSudoku
 } = require('../lib/exercises');
 
 describe("exercises", function() {
-  describe("grouped_anagrams", function() {
+  describe("groupedAnagrams", function() {
     it("will return [] for an empty array", function() {
       // Arrange
       const list = [];
 
       // Act-Assert
-      expect(grouped_anagrams(list)).to.eql([]);
+      expect(groupedAnagrams(list)).to.eql([]);
     });
 
     it("will work for the README example", function() {
@@ -20,7 +20,7 @@ describe("exercises", function() {
       const list = ["eat", "tea", "tan", "ate", "nat", "bat"];
 
       // Act
-      const answer = grouped_anagrams(list);
+      const answer = groupedAnagrams(list);
       const expected_answer = [
         ["ate","eat","tea"],
         ["nat","tan"],
@@ -39,7 +39,7 @@ describe("exercises", function() {
       const list = ["eat", "ear", "tar", "pop", "pan", "pap"];
 
       // Act
-      const answer = grouped_anagrams(list);
+      const answer = groupedAnagrams(list);
 
       const expected_answer = [
         ["eat"],
@@ -62,7 +62,7 @@ describe("exercises", function() {
       const list = ["eat", "tae", "tea", "eta", "aet", "ate"]
 
       // Act
-      const answer = grouped_anagrams(list);
+      const answer = groupedAnagrams(list);
       const expected_answer = [
         [ "aet", "ate", "eat", "eta", "tae", "tea"]
       ];
@@ -75,14 +75,14 @@ describe("exercises", function() {
     });
   });
 
-  describe.skip("top_k_frequent_elements", function() {
+  describe.skip("topKFrequentElements", function() {
     it("works with example 1", function() {
       // Arrange
       const list = [1,1,1,2,2,3];
       const k = 2;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).to.eql([1,2]);
@@ -94,7 +94,7 @@ describe("exercises", function() {
       const k = 1;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).to.eql([1]);
@@ -106,7 +106,7 @@ describe("exercises", function() {
       const k = 1;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).to.eql([]);
@@ -118,7 +118,7 @@ describe("exercises", function() {
       const k = 3;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).to.eql([1, 2, 3]);
@@ -130,7 +130,7 @@ describe("exercises", function() {
       const k = 1;
 
       // Act
-      const answer = top_k_frequent_elements(list, k);
+      const answer = topKFrequentElements(list, k);
 
       // Assert
       expect(answer.sort()).to.eql([1]);
@@ -153,7 +153,7 @@ describe("exercises", function() {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toEqual(true);
@@ -174,7 +174,7 @@ describe("exercises", function() {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toEqual(false);
@@ -195,7 +195,7 @@ describe("exercises", function() {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toEqual(false);
@@ -216,7 +216,7 @@ describe("exercises", function() {
       ];
 
       // Act
-      const valid = valid_sudoku(table);
+      const valid = validSudoku(table);
 
       // Assert
       expect(valid).toEqual(false);
